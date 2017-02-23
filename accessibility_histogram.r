@@ -9,7 +9,7 @@ for (i in 1:4) {
 	
 	hist(
 		access[[column_name]],
-		breaks = seq(0, 8, by = 0.5),
+		breaks = seq(0, 8, by = 0.5), #Specify breaks to avoid bin width change
 		xlab = "Physician Accessibility",
 		main = paste("Catchment Size = ", as.character(i * 5), " Miles", sep = ""),
 		xlim = c(0, 8),
@@ -33,7 +33,7 @@ for (i in 3:9) {
 	
 	hist(
 		log(access[[column_name]]),
-		breaks = seq(-2, 5, by = 0.5),
+		breaks = seq(-2, 5, by = 0.5), #Specify breaks to avoid bin width change
 		xlab = "Physician Accessibility",
 		main = paste("Beta = ", as.character(format(i * 0.2, nsmall = 1)), sep = ""),
 		xlim = c(-2, 5),
